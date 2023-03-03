@@ -30,6 +30,7 @@ module.exports = {
             emojiCache.find(emoji => emoji.name === 'VALORANTfan'),
         ]
         const otherGameFanEmojis = [
+            emojiCache.find(emoji => emoji.name === 'DESTINY2fan'),
             emojiCache.find(emoji => emoji.name === 'FNfan'),
             emojiCache.find(emoji => emoji.name === 'PUBGfan'),
             emojiCache.find(emoji => emoji.name === 'TARKOVfan'),
@@ -141,6 +142,7 @@ module.exports = {
             .setTitle(`Select the games you play that are talked about in our server:`)
             .setDescription(` 
         **Shooters**
+        ${emojiCache.find(emoji => emoji.name === 'DESTINY2fan')} - Destiny 2
         ${emojiCache.find(emoji => emoji.name === 'FNfan')} - Fortnite
         ${emojiCache.find(emoji => emoji.name === 'PUBGfan')} - PlayerUnknown's Battlegrounds
         ${emojiCache.find(emoji => emoji.name === 'TARKOVfan')} - Escape from Tarkov
@@ -350,8 +352,8 @@ module.exports = {
                 break;
             }
             case "test": {
-                const mainRolesMessage = await channel.send({ embeds: [mainRole], files: ["assets/Roles Panel.png"], fetchReply: true });
-                mainRoleEmojis.forEach(emoji => mainRolesMessage.react(emoji));
+                const otherGamesMessage = await channel.send({ embeds: [otherGames], files: ["assets/Other Games Panel.png"], fetchReply: true });
+                otherGameFanEmojis.forEach(emoji => otherGamesMessage.react(emoji));
                 break;
             }
             case "rocketLeague": {

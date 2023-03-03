@@ -405,5 +405,12 @@
             "name":"Esports and Gaming Arena",
             "id":1027244979095097404
         }
+    },
+    "DESTINY2fan" :{
+        "name":"DESTINY2fan",
+        "role":{
+            "name":"DESTINY2fan",
+            "id":1081290336120340622
+        }
     }
 }
