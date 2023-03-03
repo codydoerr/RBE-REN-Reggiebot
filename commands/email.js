@@ -71,8 +71,8 @@ module.exports = {
                 text: 
                 'Hello and Welcome to the Redbird Esports Discord server! \n\n' + 
                 'You are on your way to getting verified, thank you for your patience with this process. ' +
-                'The next step is to create a ticket using the ticket tool found in the #verify channel. ' +
-                'A moderator will then assist you with the final step. \n\nPlease remember this code: ' + verificationCode +
+                'The next step is to go back to your ticket, run /verify and enter this code:\n ' + verificationCode +
+                'A moderator will then assist you with the final step.' + 
                 
                 '\n\nThank you, \n\n' +
                 
@@ -84,7 +84,13 @@ module.exports = {
                 } else {
                     console.log('Email sent: ' + info.response);
                 }  
-            interaction.reply("Thank you for inputting the email " + domain[0] + '\nThe next steps to verify are:\n1. Type your display name below  in the following format: First Name "Gamertag" Last Name.\n2. Join our club on RedbirdLife: https://redbirdlife.illinoisstate.edu/organization/redbirdgaming')
+            interaction.reply(
+                `Thank you for inputting the email ${domain[0]}
+                The next steps to verify are:
+                1. Type your display name below in the following format: 
+                    First Name "Gamertag" Last Name.
+                2. Join our club on RedbirdLife: 
+                    https://redbirdlife.illinoisstate.edu/organization/redbirdgaming`)
 			//setTimeout(()=> {interaction.deleteReply()},10000)
             })
         }
