@@ -10,7 +10,7 @@ myIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS, Intent
 
 const client = new Client({ intents: myIntents, partials: ['MESSAGE','CHANNEL','REACTION'] });
 client.commands = new Collection();
-const {token,twit_bearer, consumer_keyU, consumer_secretU, access_tokenU, access_token_secretU} = require('./config.json');
+const {token, twit_bearer, consumer_keyU, consumer_secretU, access_tokenU, access_token_secretU} = require('./config.json');
 //Loads Command files
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 //Loads event files
@@ -19,32 +19,6 @@ const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'
 client.once('ready', () => {
 	console.log('Ready!');
 });
-client.on('ready', async () =>{
-			/*===START MESSAGE CACHE===*/
-	/*Description
-	This code is used to cache messages that we will need to use for other purposes
-	
-	console.log("hi im in here yay")
-	const channelArray = 
-	[
-		1073263946083082301
-	]
-	const messageArray = 
-	[
-		1080192968364916897,
-		1080192971267387497
-	]
-	let guild = await client.guilds.fetch('145107585178140673');
-	let channelObj;
-	let messageObj;
-	channelArray.forEach(channel => {
-		channelObj = guild.channels.cache.get(`${channel}`);
-		messageArray.forEach(async message => {
-			messageObj = await channelObj.messages.fetch(`${message}`)})
-		});
-	
-	/*===END MESSAGE CACHE===*/
-	});
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
