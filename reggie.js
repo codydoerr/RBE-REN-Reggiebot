@@ -1,5 +1,6 @@
 const { Client,Collection,MessageAttachment,MessageActionRow,MessageSelectMenu, Intents, GuildMemberRoleManager, Activity, GatewayIntentBits } = require('discord.js');
 const { ActivityType } = require('discord-api-types/v9');
+const Twi = require('node-twitch');
 const fs = require('fs');
 //const Twit = require('twit');
 
