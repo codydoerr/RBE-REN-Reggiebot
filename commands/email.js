@@ -83,7 +83,14 @@ module.exports = {
                     console.log(error);
                 } else {
                     console.log('Email sent: ' + info.response);
-                }  
+                }
+                const mailEmbed = new MessageEmbed()
+                .setColor('FF0000')
+                .setImage("attachment://EsportsPanel_REN_B.png")
+                .setTitle('Redbird Esports Network')
+                .setURL("https://campusrecreation.illinoisstate.edu/esports/career/")
+                .setDescription("The esports and gaming business is growing fast. The Redbird Esports Network (REN) gives you hands-on experience in the exciting gaming industry. REN is a student-led mock entrepreneurial start-up. You'll use the skills you learn in the classroom and apply them to the real world. There are numerous ways to get involved.");
+              
             interaction.reply(
                 `Thank you for inputting the email ${domain[0]}
                 The next steps to verify are:
