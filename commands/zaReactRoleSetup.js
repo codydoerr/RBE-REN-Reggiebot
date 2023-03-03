@@ -38,11 +38,12 @@ module.exports = {
             emojiCache.find(emoji => emoji.name === 'NBA2Kfan'),
             emojiCache.find(emoji => emoji.name === 'MADDENfan'),
             emojiCache.find(emoji => emoji.name === 'FIFAfan'),
+            emojiCache.find(emoji => emoji.name === 'STARWARSfan'),
             emojiCache.find(emoji => emoji.name === 'HSfan'),
             emojiCache.find(emoji => emoji.name === 'MTGfan'),
+            emojiCache.find(emoji => emoji.name === 'YUGIOHfan'),
             emojiCache.find(emoji => emoji.name === 'SMITEfan'),
             emojiCache.find(emoji => emoji.name === 'DOTAfan'),
-            emojiCache.find(emoji => emoji.name === 'YUGIOHfan'),
             emojiCache.find(emoji => emoji.name === 'AMONGUSfan'),
             emojiCache.find(emoji => emoji.name === 'PokeGOfan'),
             emojiCache.find(emoji => emoji.name === 'OTHERfan')
@@ -153,6 +154,9 @@ module.exports = {
         ${emojiCache.find(emoji => emoji.name === 'MADDENfan')} - Madden
         ${emojiCache.find(emoji => emoji.name === 'FIFAfan')} - FIFA
         
+        **Roleplaying Games**
+        ${emojiCache.find(emoji => emoji.name === 'STARWARSfan')} - Star Wars: The Old Republic
+
         **Card Games**
         ${emojiCache.find(emoji => emoji.name === 'HSfan')} - Hearthstone
         ${emojiCache.find(emoji => emoji.name === 'MTGfan')} - Magic: The Gathering

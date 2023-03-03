@@ -412,5 +412,12 @@
             "name":"DESTINY2fan",
             "id":1081290336120340622
         }
+    },
+    "STARWARSfan" :{
+        "name":"STARWARSfan",
+        "role":{
+            "name":"STARWARSfan",
+            "id":1081336191686815794
+        }
     }
 }
