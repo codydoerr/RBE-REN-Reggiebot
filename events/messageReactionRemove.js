@@ -9,7 +9,6 @@ module.exports = {
 				console.error('Something went wrong when fetching the message', error);
 			}
 		}
-		console.log("got react");
 		if(user != reaction.client.user){
 			if(emojiJSON.hasOwnProperty(reaction.emoji.name) && reaction.message.channelId == '1081301966510100480'){
 				TestRole = reaction.message.guild.roles.cache.find((role) => role.name === emojiJSON[reaction.emoji.name].role.name);
