@@ -1,0 +1,23 @@
+{
+  "name": "rbe-discordbotver13",
+  "version": "1.0.0",
+  "main": "reggie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@api-typings/discord": "^6.0.0",
+    "@discordjs/builders": "^0.5.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.22.0",
+    "discord.js": "^13.1.0",
+    "node-twitch": "^0.5.0",
+    "nodemailer": "^6.6.3",
+    "twit": "^2.2.11",
+    "twitter-api-v2": "^1.14.1",
+    "undici": "^5.14.0"
+  },
+  "description": ""
+}

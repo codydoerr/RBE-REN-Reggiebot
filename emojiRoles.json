@@ -1,0 +1,409 @@
+{
+    "categories":{
+        "clubGames":[
+            "APEXfan","CODfan","CSfan","DnDfan","FFXIVfan","HALOfan","LOLfan","OWfan","R6fan","RLfan","SMASHfan","VALORANTfan"
+        ],
+        "otherGames":[
+            "FNfan","PUBGfan","TARKOVfan","GEARSfan","NBA2Kfan","MADDENfan","FIFAfan","HSfan","MTGfan","SMITEfan","DOTAfan","YUGIOHfan","AMONGUSfan","PokeGOfan","OTHERfan"
+        ]
+    },
+    "APEXfan" :{
+        "name":"APEXfan",
+        "role":{
+            "name":"APEXfan",
+            "id":672818973150281748
+        }
+    },
+    "CODfan" :{
+        "name":"CODfan",
+        "role":{
+            "name":"CODfan",
+            "id":672818976954384454
+        }
+    },
+    "CSfan" :{
+        "name":"CSfan",
+        "role":{
+            "name":"CSfan",
+            "id":672818979949248512
+        }
+    },
+    "DnDfan" :{
+        "name":"DnDfan",
+        "role":{
+            "name":"DnDfan",
+            "id":745827213022068839
+        }
+    },
+    "HALOfan" :{
+        "name":"HALOfan",
+        "role":{
+            "name":"HALOfan",
+            "id":681573235422396417
+        }
+    },
+    "LOLfan" :{
+        "name":"LOLfan",
+        "role":{
+            "name":"LOLfan",
+            "id":672818997816852481
+        }
+    },
+    "OWfan" :{
+        "name":"OWfan",
+        "role":{
+            "name":"OWfan",
+            "id":672819014787006484
+        }
+    },
+    "R6fan" :{
+        "name":"R6fan",
+        "role":{
+            "name":"R6fan",
+            "id":672819024710729739
+        }
+    },
+    "RLfan" :{
+        "name":"RLfan",
+        "role":{
+            "name":"RLfan",
+            "id":672819030582886439
+        }
+    },
+    "SMASHfan" :{
+        "name":"SMASHfan",
+        "role":{
+            "name":"SMASHfan",
+            "id":672819036081356818
+        }
+    },
+    "VALORANTfan" :{
+        "name":"VALORANTfan",
+        "role":{
+            "name":"VALORANTfan",
+            "id":695079488773685290
+        }
+    },
+    "FNfan" :{
+        "name":"FNfan",
+        "role":{
+            "name":"FNfan",
+            "id":672818990741061651
+        }
+    },
+    "PUBGfan" :{
+        "name":"PUBGfan",
+        "role":{
+            "name":"PUBGfan",
+            "id":1078735825304571994
+        }
+    },
+    "GENGAMESfan":{
+        "name" : "GENGAMESfan",
+        "role":{
+            "name":"GENGAMESfan",
+            "id":761736314923647017
+        }
+    },
+    "GAMEDEVfan":{
+        "name" : "GAMEDEVfan",
+        "role":{
+            "name":"GAMEDEVfan",
+            "id":755221498133872730
+        }
+    },
+    "TARKOVfan" :{
+        "name":"TARKOVfan",
+        "role":{
+            "name":"TARKOVfan",
+            "id":681981059629711362
+        }
+    },
+    "GEARSfan" :{
+        "name":"GEARSfan",
+        "role":{
+            "name":"GEARSfan",
+            "id":685614162344280099
+        }
+    },
+    "NBA2Kfan" :{
+        "name":"NBA2Kfan",
+        "role":{
+            "name":"NBA2Kfan",
+            "id":672819011544678400
+        }
+    },
+    "MADDENfan" :{
+        "name":"MADDENfan",
+        "role":{
+            "name":"MADDENfan",
+            "id":672819002929840129
+        }
+    },
+    "MCfan" :{
+        "name":"MCfan",
+        "role":{
+            "name":"MCfan",
+            "id":883441275938938880
+        }
+    },
+    "FIGHTINGfan" :{
+        "name":"FIGHTINGfan",
+        "role":{
+            "name":"FIGHTINGfan",
+            "id":756575848039055381
+        }
+    },
+    "FIFAfan" :{
+        "name":"FIFAfan",
+        "role":{
+            "name":"FIFAfan",
+            "id":672818987909775415
+        }
+    },
+    "HSfan" :{
+        "name":"HSfan",
+        "role":{
+            "name":"HSfan",
+            "id":672818994914263050
+        }
+    },
+    "FFXIVfan" :{
+        "name":"FFXIVfan",
+        "role":{
+            "name":"FFXIVfan",
+            "id":1050480973441138739
+        }
+    },
+    "MTGfan" :{
+        "name":"MTGfan",
+        "role":{
+            "name":"MTGfan",
+            "id":672819006104666171
+        }
+    },
+    "SMITEfan" :{
+        "name":"SMITEfan",
+        "role":{
+            "name":"SMITEfan",
+            "id":672819042029010944
+        }
+    },
+    "DOTAfan" :{
+        "name":"DOTAfan",
+        "role":{
+            "name":"DOTAfan",
+            "id":672818982893649921
+        }
+    },
+    "YUGIOHfan" :{
+        "name":"YUGIOHfan",
+        "role":{
+            "name":"YUGIOHfan",
+            "id":1078736188569026580
+        }
+    },
+    "AMONGUSfan" :{
+        "name":"AMONGUSfan",
+        "role":{
+            "name":"AMONGUSfan",
+            "id":753728478091673641
+        }
+    },
+    "PokeGOfan" :{
+        "name":"PokeGOfan",
+        "role":{
+            "name":"PokeGOfan",
+            "id":1078736414210007151
+        }
+    },
+    "OTHERfan" :{
+        "name":"OTHERfan",
+        "role":{
+            "name":"OTHERfan",
+            "id":681982421432008776
+        }
+    },
+    "ANIMEfan" :{
+        "name":"ANIMEfan",
+        "role":{
+            "name":"ANIMEfan",
+            "id":754052310870524085
+        }
+    },
+    "BOARDfan" :{
+        "name":"BOARDfan",
+        "role":{
+            "name":"BOARDfan",
+            "id":752890003603980350
+        }
+    },
+    "XBOXfan" :{
+        "name":"XBOXfan",
+        "role":{
+            "name":"XBOXfan",
+            "id":672819048576319489
+        }
+    },
+    "PSfan" :{
+        "name":"PSfan",
+        "role":{
+            "name":"PSfan",
+            "id":672819049062989827
+        }
+    },
+    "SWITCHfan" :{
+        "name":"SWITCHfan",
+        "role":{
+            "name":"SWITCHfan",
+            "id":672819050317086751
+        }
+    },
+    "PCfan" :{
+        "name":"PCfan",
+        "role":{
+            "name":"PCfan",
+            "id":672819046089097251
+        }
+    },
+    "MOBILEfan" :{
+        "name":"MOBILEfan",
+        "role":{
+            "name":"MOBILEfan",
+            "id":672819053622067200
+        }
+    },
+    "RETROfan" :{
+        "name":"RETROfan",
+        "role":{
+            "name":"RETROfan",
+            "id":672819052196003850
+        }
+    },
+    "hehim" :{
+        "name":"hehim",
+        "role":{
+            "name":"he/him",
+            "id":764172958163402772
+        }
+    },
+    "sheher" :{
+        "name":"sheher",
+        "role":{
+            "name":"she/her",
+            "id":764173155753263125
+        }
+    },
+    "theythem" :{
+        "name":"theythem",
+        "role":{
+            "name":"they/them",
+            "id":764173276502294538
+        }
+    },
+    "askme" :{
+        "name":"askme",
+        "role":{
+            "name":"Ask Me",
+            "id":764173497210503188
+        }
+    },
+    "1️⃣" :{
+        "name":"Freshman",
+        "role":{
+            "name":"Freshman",
+            "id":1078770848804130966
+        }
+    },
+    "2️⃣" :{
+        "name":"Sophomore",
+        "role":{
+            "name":"Sophomore",
+            "id":1078771169559314594
+        }
+    },
+    "3️⃣" :{
+        "name":"Junior",
+        "role":{
+            "name":"Junior",
+            "id":1078771316028620800
+        }
+    },
+    "4️⃣" :{
+        "name":"Senior",
+        "role":{
+            "name":"Senior",
+            "id":1078771389722546256
+        }
+    },
+    "🎓" :{
+        "name":"Graduate",
+        "role":{
+            "name":"Graduate",
+            "id":1078771524355506268
+        }
+    },    
+    "🇭" :{
+        "name":"Hewitt Hall",
+        "role":{
+            "name":"Hewitt Hall",
+            "id":743950650081148969
+        }
+    },    
+    "🇲" :{
+        "name":"Manchester Hall",
+        "role":{
+            "name":"Manchester Hall",
+            "id":743950681374982274
+        }
+    },    
+    "🇹" :{
+        "name":"Tri Towers",
+        "role":{
+            "name":"Tri Towers",
+            "id":743950844357116024
+        }
+    },    
+    "🇨" :{
+        "name":"Cardinal Court",
+        "role":{
+            "name":"Cardinal Court",
+            "id":743950896160833586
+        }
+    },    
+    "🇼" :{
+        "name":"Watterson Towers",
+        "role":{
+            "name":"Watterson Towers",
+            "id":743951052155387916
+        }
+    },    
+    "🇴" :{
+        "name":"Off Campus Housing",
+        "role":{
+            "name":"Off Campus Housing",
+            "id":743951134195974174
+        }
+    },    
+    "🏅" :{
+        "name":"medal",
+        "role":{
+            "name":"Results",
+            "id":736304689905139782
+        }
+    },    
+    "🎙️" :{
+        "name":"microphone2",
+        "role":{
+            "name":"Streamer",
+            "id":1048282798475186248
+        }
+    },
+    "RedbirdEHead3" :{
+        "name":"RedbirdEHead3",
+        "role":{
+            "name":"Esports and Gaming Arena",
+            "id":1027244979095097404
+        }
+    }
+}
