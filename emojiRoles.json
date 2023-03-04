@@ -419,5 +419,40 @@
             "name":"STARWARSfan",
             "id":1081336191686815794
         }
+    },
+    "tank" :{
+        "name":"tank",
+        "role":{
+            "name":"Tank",
+            "id":897125687088001124
+        }
+    },
+    "healer" :{
+        "name":"healer",
+        "role":{
+            "name":"Healer",
+            "id":897125763457892452
+        }
+    },
+    "meleeDPS" :{
+        "name":"meleeDPS",
+        "role":{
+            "name":"Melee DPS",
+            "id":1081363629615620096
+        }
+    },
+    "rangedMDPS" :{
+        "name":"rangedMDPS",
+        "role":{
+            "name":"Ranged Magical DPS",
+            "id":1081363514423259227
+        }
+    },
+    "rangedPDPS" :{
+        "name":"rangedPDPS",
+        "role":{
+            "name":"Ranged Physical DPS",
+            "id":1081363320130506839
+        }
     }
 }

@@ -104,7 +104,12 @@ module.exports = {
         ]
         const positionEmojis = ['✅',
         ]
-        const roleFFXIVEmojis = ['✅',
+        const roleFFXIVEmojis = [
+            emojiCache.find(emoji => emoji.name === 'tank'),
+            emojiCache.find(emoji => emoji.name === 'healer'),
+            emojiCache.find(emoji => emoji.name === 'meleeDPS'),
+            emojiCache.find(emoji => emoji.name === 'rangedMDPS'),
+            emojiCache.find(emoji => emoji.name === 'rangedPDPS'),
         ]
         const serverTalentMCEmojis = ['✅',
         ]
@@ -248,7 +253,18 @@ module.exports = {
         const roleFFXIV = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your desired role:`)
-            .setDescription(``);
+            .setDescription(`
+            ${emojiCache.find(emoji => emoji.name === 'tank')} - Tank
+            *(Paladin, Warrior, Dark Knight, Gunbreaker)*
+            ${emojiCache.find(emoji => emoji.name === 'healer')} - Healer
+            *(White Mage, Scholar, Astrologian, Sage)*
+            ${emojiCache.find(emoji => emoji.name === 'meleeDPS')} - Melee DPS
+            *(Monk, Dragoon, Ninja, Samurai, Reaper)*
+            ${emojiCache.find(emoji => emoji.name === 'rangedMDPS')} - Ranged Magical DPS
+            *(Bard, Mechanist, Dancer)*
+            ${emojiCache.find(emoji => emoji.name === 'rangedPDPS')} - Ranged Physical DPS
+            *(Black Mage, Summoner, Red Mage, Blue Mage)*
+            `);
         const serverTalentMC = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your talent:`)
@@ -352,6 +368,22 @@ module.exports = {
 
                 const arenaMessage = await channel.send({ embeds: [arena], files: ["assets/Arena Panel.png"], fetchReply: true });
                 arenaEmojis.forEach(emoji => arenaMessage.react(emoji));
+
+                break;
+            }
+            case "ffxiv": {
+
+                const roleFFXIVMessage = await channel.send({ embeds: [roleFFXIV], files: ["assets/Roles Panel.png"], fetchReply: true });
+                roleFFXIVEmojis.forEach(emoji => roleFFXIVMessage.react(emoji));
+
+                const pronounMessage = await channel.send({ embeds: [pronoun], files: ["assets/Pronouns Panel.png"], fetchReply: true });
+                pronounEmojis.forEach(emoji => pronounMessage.react(emoji));
+
+                const yearMessage = await channel.send({ embeds: [year], files: ["assets/Student Year Panel.png"], fetchReply: true });
+                yearEmojis.forEach(emoji => yearMessage.react(emoji));
+
+                const livingMessage = await channel.send({ embeds: [living], files: ["assets/Living Quarters Panel.png"], fetchReply: true });
+                livingEmojis.forEach(emoji => livingMessage.react(emoji));
 
                 break;
             }

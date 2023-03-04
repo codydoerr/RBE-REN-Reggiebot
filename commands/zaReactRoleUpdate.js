@@ -51,7 +51,7 @@ module.exports = {
         ===END OF CHANGES===
         */
         let aGuild = await interaction.guild.fetch()
-        let channel = await aGuild.channels.fetch('1081301966510100480');
+        let channel = await aGuild.channels.fetch('1081301966510100480'); 
         let message = await channel.messages.fetch('1081302070574985287'); //MUST CHANGE THIS TO PROPER MESSAGE
         //   await message.removeAttachments();
         //   await message.edit({ embeds: [otherGames], files: ["assets/Other Games Panel.png"], fetchReply: true });

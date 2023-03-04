@@ -13,17 +13,18 @@ for (const file of commandFiles) {
 
 const clientId = '886351724242153507';
 const guildId = '145107585178140673';
+const guilds = ['145107585178140673','894347607470641193'];
 
 const rest = new REST({ version: '9' }).setToken(token);
 
 (async () => {
 	try {
 		console.log('Started refreshing application (/) commands.');
-
-		await rest.put(
-			Routes.applicationGuildCommands(clientId, guildId),
+		guilds.forEach(async guild => {await rest.put(
+			Routes.applicationGuildCommands(clientId, guild),
 			{ body: commands },
-		);
+	)});
+		
 
 		console.log('Successfully reloaded application (/) commands.');
 	} catch (error) {
