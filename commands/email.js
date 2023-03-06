@@ -69,14 +69,18 @@ module.exports = {
                 to: ilstuemail,
                 subject: 'Redbird Esports Discord Verification',
                 text: 
-                'Hello and Welcome to the Redbird Esports Discord server! \n\n' + 
-                'You are on your way to getting verified, thank you for your patience with this process. ' +
-                'The next step is to go back to your ticket, run /verify and enter this code:\n ' + verificationCode +
-                'A moderator will then assist you with the final step.' + 
+                `Hello and Welcome to the Redbird Esports Discord server! 
+                You are on your way to getting verified, thank you for your patience with this process. 
                 
-                '\n\nThank you, \n\n' +
+                The next step is to go back to your ticket, a moderator will verify you and give access to run /verify and enter this code:  ${verificationCode}
                 
-                'Reggiebot\nRedbird Esports Discord'          
+                The moderator will then assist you with the final step.
+                
+                
+                Thank you, 
+                
+                Reggiebot
+                Redbird Esports Discord`          
                 };
             transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
