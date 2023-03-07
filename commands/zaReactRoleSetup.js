@@ -261,9 +261,9 @@ module.exports = {
             ${emojiCache.find(emoji => emoji.name === 'meleeDPS')} - Melee DPS
             *(Monk, Dragoon, Ninja, Samurai, Reaper)*
             ${emojiCache.find(emoji => emoji.name === 'rangedMDPS')} - Ranged Magical DPS
-            *(Bard, Mechanist, Dancer)*
-            ${emojiCache.find(emoji => emoji.name === 'rangedPDPS')} - Ranged Physical DPS
             *(Black Mage, Summoner, Red Mage, Blue Mage)*
+            ${emojiCache.find(emoji => emoji.name === 'rangedPDPS')} - Ranged Physical DPS
+            *(Bard, Mechanist, Dancer)*
             `);
         const serverTalentMC = new MessageEmbed()
             .setColor('CE1126')
