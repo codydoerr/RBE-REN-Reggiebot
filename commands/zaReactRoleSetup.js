@@ -111,6 +111,22 @@ module.exports = {
             emojiCache.find(emoji => emoji.name === 'rangedMDPS'),
             emojiCache.find(emoji => emoji.name === 'rangedPDPS'),
         ]
+        const datacenterFFXIVEmojis = [            
+            `🟩`,
+            `🟨`, 
+            `🟧`, 
+            `🟥`
+        ]
+        const playstylesFFXIVEmojis = [
+            emojiCache.find(emoji => emoji.name === 'pvp'),
+            emojiCache.find(emoji => emoji.name === 'raiders'),
+            emojiCache.find(emoji => emoji.name === 'ultimates'),
+            emojiCache.find(emoji => emoji.name === 'highend'),
+        ]
+        const serverRoleFFXIVEmojis = [            
+            `👥`,
+            `🗓️`, 
+        ]
         const serverTalentMCEmojis = ['✅',
         ]
         const serverTypeMCEmojis = ['✅',
@@ -256,15 +272,52 @@ module.exports = {
             .setDescription(`
             ${emojiCache.find(emoji => emoji.name === 'tank')} - Tank
             *(Paladin, Warrior, Dark Knight, Gunbreaker)*
+
             ${emojiCache.find(emoji => emoji.name === 'healer')} - Healer
             *(White Mage, Scholar, Astrologian, Sage)*
+
             ${emojiCache.find(emoji => emoji.name === 'meleeDPS')} - Melee DPS
             *(Monk, Dragoon, Ninja, Samurai, Reaper)*
-            ${emojiCache.find(emoji => emoji.name === 'rangedMDPS')} - Ranged Magical DPS
+
+            ${emojiCache.find(emoji => emoji.name === 'rangedMDPS')} - Ranged Magical DPS   
             *(Black Mage, Summoner, Red Mage, Blue Mage)*
+
             ${emojiCache.find(emoji => emoji.name === 'rangedPDPS')} - Ranged Physical DPS
-            *(Bard, Mechanist, Dancer)*
+            *(Bard, Machinist, Dancer)*
+            `);        
+        const datacenterFFXIV = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`Select the datacenter for your server:`)
+            .setDescription(`
+            🟩 - Crystal:
+            *(Balmung, Brynhildr, Coeurl, Diabolos, Goblin, Malboro, Mateus, Zalera)*
+
+            🟨 - Aether:
+            *(Adamantois, Cactuar, Faerie, Gilgamesh, Jenova, Midgardsormr, Sargatanas, Siren)*
+
+            🟧 - Primal:   
+            *(Behemoth, Excalibur, Exodus, Famfrit, Hyperion, Lamia, Leviathan, Ultros)*
+
+            🟥 - Dynamis:
+            *(Halicarnassus, Maduin, Marlith, Seraph)*
+            `);        
+        const playstylesFFXIV = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`Select your playstyles:`)
+            .setDescription(`
+            ${emojiCache.find(emoji => emoji.name === 'pvp')} - PvP
+            ${emojiCache.find(emoji => emoji.name === 'raiders')} - Raiders
+            ${emojiCache.find(emoji => emoji.name === 'ultimates')} - Ultimates
+            ${emojiCache.find(emoji => emoji.name === 'highend')} - High End Content
+            *(For players interested in endgame PvE content, such as savage and unreal raids, trials, as well as criterion dungeons.)*
             `);
+        const serverRolesFFXIV = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`Select your club roles:`)
+            .setDescription(`
+            🗓️ - Community Events
+            👥 - Looking For Party
+            `);   
         const serverTalentMC = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your talent:`)
@@ -324,6 +377,15 @@ module.exports = {
                 const roleFFXIVMessage = await channel.send({ embeds: [roleFFXIV], files: ["assets/Roles Panel.png"], fetchReply: true });
                 roleFFXIVEmojis.forEach(emoji => roleFFXIVMessage.react(emoji));
 
+                const datacenterFFXIVMessage = await channel.send({ embeds: [datacenterFFXIV], files: ["assets/Datacenters.png"], fetchReply: true });
+                datacenterFFXIVEmojis.forEach(emoji => datacenterFFXIVMessage.react(emoji));
+
+                const playstylesFFXIVMessage = await channel.send({ embeds: [playstylesFFXIV], files: ["assets/Interests Panel.png"], fetchReply: true });
+                playstylesFFXIVEmojis.forEach(emoji => playstylesFFXIVMessage.react(emoji));
+
+                const serverRolesFFXIVMessage = await channel.send({ embeds: [serverRolesFFXIV], files: ["assets/Club Roles.png"], fetchReply: true });
+                serverRoleFFXIVEmojis.forEach(emoji => serverRolesFFXIVMessage.react(emoji));
+
                 const serverTalentMCMessage = await channel.send({ embeds: [serverTalentMC], files: ["assets/Server Talent Panel.png"], fetchReply: true });
                 serverTalentMCEmojis.forEach(emoji => serverTalentMCMessage.react(emoji));
 
@@ -376,6 +438,15 @@ module.exports = {
                 const roleFFXIVMessage = await channel.send({ embeds: [roleFFXIV], files: ["assets/Roles Panel.png"], fetchReply: true });
                 roleFFXIVEmojis.forEach(emoji => roleFFXIVMessage.react(emoji));
 
+                const datacenterFFXIVMessage = await channel.send({ embeds: [datacenterFFXIV], files: ["assets/Datacenters.png"], fetchReply: true });
+                datacenterFFXIVEmojis.forEach(emoji => datacenterFFXIVMessage.react(emoji));
+
+                const playstylesFFXIVMessage = await channel.send({ embeds: [playstylesFFXIV], files: ["assets/Playstyles.png"], fetchReply: true });
+                playstylesFFXIVEmojis.forEach(emoji => playstylesFFXIVMessage.react(emoji));
+
+                const serverRolesFFXIVMessage = await channel.send({ embeds: [serverRolesFFXIV], files: ["assets/Club Roles.png"], fetchReply: true });
+                serverRoleFFXIVEmojis.forEach(emoji => serverRolesFFXIVMessage.react(emoji));
+
                 const pronounMessage = await channel.send({ embeds: [pronoun], files: ["assets/Pronouns Panel.png"], fetchReply: true });
                 pronounEmojis.forEach(emoji => pronounMessage.react(emoji));
 
@@ -388,8 +459,8 @@ module.exports = {
                 break;
             }
             case "test": {
-                const otherGamesMessage = await channel.send({ embeds: [otherGames], files: ["assets/Other Games Panel.png"], fetchReply: true });
-                otherGameFanEmojis.forEach(emoji => otherGamesMessage.react(emoji));
+                const serverRolesFFXIVMessage = await channel.send({ embeds: [serverRolesFFXIV], files: ["assets/Club Roles.png"], fetchReply: true });
+                serverRoleFFXIVEmojis.forEach(emoji => serverRolesFFXIVMessage.react(emoji));
                 break;
             }
             case "rocketLeague": {

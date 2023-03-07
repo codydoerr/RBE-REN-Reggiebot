@@ -454,5 +454,75 @@
             "name":"Ranged Physical DPS",
             "id":1081363320130506839
         }
+    },
+    "🟩" :{
+        "name":"🟩",
+        "role":{
+            "name":"Crystal",
+            "id":897126423498735646
+        }
+    },
+    "🟨" :{
+        "name":"🟨",
+        "role":{
+            "name":"Aether",
+            "id":897126372986748970
+        }
+    },
+    "🟧" :{
+        "name":"🟧",
+        "role":{
+            "name":"Primal",
+            "id":897126397720530944
+        }
+    },
+    "🟥" :{
+        "name":"🟥",
+        "role":{
+            "name":"Dynamis",
+            "id":1082688065505599508
+        }
+    },
+    "highend" :{
+        "name":"highend",
+        "role":{
+            "name":"High End Content",
+            "id":1067530733935136789
+        }
+    },
+    "ultimates" :{
+        "name":"ultimates",
+        "role":{
+            "name":"Ultimates",
+            "id":897128218706985031
+        }
+    },
+    "raiders" :{
+        "name":"raiders",
+        "role":{
+            "name":"Raiders",
+            "id":897128171516874782
+        }
+    },
+    "pvp" :{
+        "name":"pvp",
+        "role":{
+            "name":"PvP",
+            "id":897128087567876096
+        }
+    },
+    "🗓️" :{
+        "name":"🗓️",
+        "role":{
+            "name":"Community Event",
+            "id":994686089304490014
+        }
+    },
+    "👥" :{
+        "name":"👥",
+        "role":{
+            "name":"Looking For Party",
+            "id":1012070053073649714
+        }
     }
 }
