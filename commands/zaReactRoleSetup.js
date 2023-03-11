@@ -403,6 +403,18 @@ module.exports = {
 
                 break;
             }
+            case "destiny2": {
+                const pronounMessage = await channel.send({ embeds: [pronoun], files: ["assets/Pronouns Panel.png"], fetchReply: true });
+                pronounEmojis.forEach(emoji => pronounMessage.react(emoji));
+
+                const livingMessage = await channel.send({ embeds: [living], files: ["assets/Living Quarters Panel.png"], fetchReply: true });
+                livingEmojis.forEach(emoji => livingMessage.react(emoji));
+
+                const yearMessage = await channel.send({ embeds: [year], files: ["assets/Student Year Panel.png"], fetchReply: true });
+                yearEmojis.forEach(emoji => yearMessage.react(emoji));
+
+                break;
+            }
             case "gaming": {
                 const gamesMessage = await channel.send({ embeds: [games], files: ["assets/Games Panel.png"], fetchReply: true });
                 clubGameFanEmojis.forEach(emoji => gamesMessage.react(emoji));
