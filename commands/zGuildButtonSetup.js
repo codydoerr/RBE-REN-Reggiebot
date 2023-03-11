@@ -9,11 +9,14 @@ module.exports = {
                                         .setRequired(true)),
 	async execute(interaction, clientm) {
         //Guild button urls
+        
+        const emojiCache = interaction.guild.emojis.cache
         const test = interaction.options.getChannel("input", true);
         const row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
-                    .setLabel('Anime Club')
+                    .setLabel(`Join`)
+                    .setEmoji(`${emojiCache.find(emoji => emoji.name === 'ANIMEfan')}`)
                     .setStyle('LINK')
                     .setURL('https://discord.gg/QGv4eYBkXz'),
                 new MessageButton()
