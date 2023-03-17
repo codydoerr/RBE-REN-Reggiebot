@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed, MessageAttachment } = require('discord.js');
+const { MessageEmbed, MessageAttachment, MessageActionRow, MessageButton } = require('discord.js');
 const emojiRolesJSON = require('../emojiRoles.json');
 let reactionMessageCollector
 module.exports = {
@@ -471,8 +471,15 @@ module.exports = {
                 break;
             }
             case "test": {
-                const serverRolesFFXIVMessage = await channel.send({ embeds: [serverRolesFFXIV], files: ["assets/Club Roles.png"], fetchReply: true });
-                serverRoleFFXIVEmojis.forEach(emoji => serverRolesFFXIVMessage.react(emoji));
+                const row = new MessageActionRow()
+                .addComponents(
+                    new MessageButton()
+                        .setCustomId('inviteList')
+                        .setLabel('Click here to see your servers to join!')
+                        .setStyle('SECONDARY')
+                );
+                const gamesMessage = await channel.send({ embeds: [games], components: [row], files: ["assets/Games Panel.png"], fetchReply: true });
+                clubGameFanEmojis.forEach(emoji => gamesMessage.react(emoji));
                 break;
             }
             case "rocketLeague": {
