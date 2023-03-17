@@ -6,11 +6,13 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('za_reactrolesetup')
         .setDescription('Select role and menu name')
-        .addChannelOption(option => option.setName('channel')
-            .setDescription("Channel to post the discord roles")
+        .addChannelOption(option => 
+            option.setName('Channel')
+            .setDescription("Channel to post the react roles")
             .setRequired(true))
-        .addStringOption(option => option.setName('server')
-            .setDescription("the server role menu ur posting")
+        .addStringOption(option => 
+            option.setName('Server')
+            .setDescription("The server template you are posting")
             .setRequired(true)),
     async execute(interaction, clientm) {
         //const emojiRoles = JSON.parse(emojiRolesJSON);
@@ -72,38 +74,31 @@ module.exports = {
             '🇼',
             '🇴'
         ]
-        const rankHaloEmojis = [emojiCache.find(emoji => emoji.name === 'OnyxRank'),
-        emojiCache.find(emoji => emoji.name === 'DiamondRank'),
-        emojiCache.find(emoji => emoji.name === 'PlatinumRank'),
-        emojiCache.find(emoji => emoji.name === 'GoldRank'),
-        emojiCache.find(emoji => emoji.name === 'SilverRank'),
-        emojiCache.find(emoji => emoji.name === 'BronzeRank')
+        const arenaEmojis = [
+            emojiCache.find(emoji => emoji.name === 'RedbirdEHead3'),
         ]
-        const rankRLEmojis = [emojiCache.find(emoji => emoji.name === 'RLBronze'),
-        emojiCache.find(emoji => emoji.name === 'RLSilver'),
-        emojiCache.find(emoji => emoji.name === 'RLGold'),
-        emojiCache.find(emoji => emoji.name === 'RLPlat'),
-        emojiCache.find(emoji => emoji.name === 'RLDiamond'),
-        emojiCache.find(emoji => emoji.name === 'RLChamp'),
-        emojiCache.find(emoji => emoji.name === 'RLGC'),
-        emojiCache.find(emoji => emoji.name === 'RLSSL')
+        const mainRoleEmojis = ['🏅', '🎙️'
         ]
+        const yearEmojis = ['1️⃣',
+        '2️⃣',
+        '3️⃣',
+        '4️⃣',
+        '🎓',
+        ]
+        const notificationEmojis = ['✅',
+    ]
+
         const socialEmojis = [emojiCache.find(emoji => emoji.name === 'twitter'),
         emojiCache.find(emoji => emoji.name === 'youtube'),
         emojiCache.find(emoji => emoji.name === 'twitch'),
         ]
         const clubEmojis = ['✅',
         ]
-        const mainRoleEmojis = ['🏅', '🎙️'
-        ]
-        const yearEmojis = ['1️⃣',
-            '2️⃣',
-            '3️⃣',
-            '4️⃣',
-            '🎓',
-        ]
+
+
         const positionEmojis = ['✅',
         ]
+        /* START FFXIV */
         const roleFFXIVEmojis = [
             emojiCache.find(emoji => emoji.name === 'tank'),
             emojiCache.find(emoji => emoji.name === 'healer'),
@@ -127,221 +122,260 @@ module.exports = {
             `👥`,
             `🗓️`, 
         ]
+        /* END FFXIV */
+
+        /* START OVERWATCH */
+        const overwatchNotifEmojis = [emojiCache.find(emoji => emoji.name === 'twitter'),
+        emojiCache.find(emoji => emoji.name === 'twitch'),
+        emojiCache.find(emoji => emoji.name === 'tracerPug'),
+        "🛎️"
+        ]
+
+        /* END OVERWATCH */   
         const serverTalentMCEmojis = ['✅',
         ]
         const serverTypeMCEmojis = ['✅',
         ]
-        const notificationEmojis = ['✅',
+        const rankHaloEmojis = [emojiCache.find(emoji => emoji.name === 'OnyxRank'),
+        emojiCache.find(emoji => emoji.name === 'DiamondRank'),
+        emojiCache.find(emoji => emoji.name === 'PlatinumRank'),
+        emojiCache.find(emoji => emoji.name === 'GoldRank'),
+        emojiCache.find(emoji => emoji.name === 'SilverRank'),
+        emojiCache.find(emoji => emoji.name === 'BronzeRank')
         ]
-        const overwatchNotifEmojis = [emojiCache.find(emoji => emoji.name === 'twitter'),
-        emojiCache.find(emoji => emoji.name === 'pickup'),
-        emojiCache.find(emoji => emoji.name === 'twitch'),
-        ]
-        const arenaEmojis = [
-            emojiCache.find(emoji => emoji.name === 'RedbirdEHead3'),
+        const rankRLEmojis = [emojiCache.find(emoji => emoji.name === 'RLBronze'),
+        emojiCache.find(emoji => emoji.name === 'RLSilver'),
+        emojiCache.find(emoji => emoji.name === 'RLGold'),
+        emojiCache.find(emoji => emoji.name === 'RLPlat'),
+        emojiCache.find(emoji => emoji.name === 'RLDiamond'),
+        emojiCache.find(emoji => emoji.name === 'RLChamp'),
+        emojiCache.find(emoji => emoji.name === 'RLGC'),
+        emojiCache.find(emoji => emoji.name === 'RLSSL')
         ]
 
+        /*START EMBEDS*/ 
+        
         const games = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select the games you play from our Redbird Gaming Clubs:`)
-            .setDescription(`*(games marked with ${emojiCache.find(emoji => emoji.name === 'redbirdred')} have varsity teams)*
+            .setDescription(`
+*(games marked with ${emojiCache.find(emoji => emoji.name === 'redbirdred')} have varsity teams)*
 
-        ${emojiCache.find(emoji => emoji.name === 'APEXfan')} - Redbird Apex Legends Club
-        ${emojiCache.find(emoji => emoji.name === 'CODfan')} - Redbird Call of Duty Club
-        ${emojiCache.find(emoji => emoji.name === 'CSfan')} - Redbird CS:GO Club
-        ${emojiCache.find(emoji => emoji.name === 'DnDfan')} - Redbird Dungeons and Dragons Club
-        ${emojiCache.find(emoji => emoji.name === 'FFXIVfan')} - Redbird FFXIV Club
-        ${emojiCache.find(emoji => emoji.name === 'SMASHfan')} - Redbird Fighting Game Club
-        ${emojiCache.find(emoji => emoji.name === 'HALOfan')} - Redbird Halo Club
-        ${emojiCache.find(emoji => emoji.name === 'LOLfan')} - Redbird League of Legends Club ${emojiCache.find(emoji => emoji.name === 'redbirdred')}
-        ${emojiCache.find(emoji => emoji.name === 'OWfan')} - Redbird Overwatch Club ${emojiCache.find(emoji => emoji.name === 'redbirdred')}
-        ${emojiCache.find(emoji => emoji.name === 'R6fan')} - Redbird Rainbow 6 Siege Club
-        ${emojiCache.find(emoji => emoji.name === 'RLfan')} - Redbird Rocket League Club ${emojiCache.find(emoji => emoji.name === 'redbirdred')}
-        ${emojiCache.find(emoji => emoji.name === 'VALORANTfan')} - Redbird VALORANT Club
+${emojiCache.find(emoji => emoji.name === 'APEXfan')} - Redbird Apex Legends Club
+${emojiCache.find(emoji => emoji.name === 'CODfan')} - Redbird Call of Duty Club
+${emojiCache.find(emoji => emoji.name === 'CSfan')} - Redbird CS:GO Club
+${emojiCache.find(emoji => emoji.name === 'DnDfan')} - Redbird Dungeons and Dragons Club
+${emojiCache.find(emoji => emoji.name === 'FFXIVfan')} - Redbird FFXIV Club
+${emojiCache.find(emoji => emoji.name === 'SMASHfan')} - Redbird Fighting Game Club
+${emojiCache.find(emoji => emoji.name === 'HALOfan')} - Redbird Halo Club
+${emojiCache.find(emoji => emoji.name === 'LOLfan')} - Redbird League of Legends Club ${emojiCache.find(emoji => emoji.name === 'redbirdred')}
+${emojiCache.find(emoji => emoji.name === 'OWfan')} - Redbird Overwatch Club ${emojiCache.find(emoji => emoji.name === 'redbirdred')}
+${emojiCache.find(emoji => emoji.name === 'R6fan')} - Redbird Rainbow 6 Siege Club
+${emojiCache.find(emoji => emoji.name === 'RLfan')} - Redbird Rocket League Club ${emojiCache.find(emoji => emoji.name === 'redbirdred')}
+${emojiCache.find(emoji => emoji.name === 'VALORANTfan')} - Redbird VALORANT Club
         `);
         const otherGames = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select the games you play that are talked about in our server:`)
             .setDescription(` 
-        **Shooters**
-        ${emojiCache.find(emoji => emoji.name === 'DESTINY2fan')} - Destiny 2
-        ${emojiCache.find(emoji => emoji.name === 'FNfan')} - Fortnite
-        ${emojiCache.find(emoji => emoji.name === 'PUBGfan')} - PlayerUnknown's Battlegrounds
-        ${emojiCache.find(emoji => emoji.name === 'TARKOVfan')} - Escape from Tarkov
-        ${emojiCache.find(emoji => emoji.name === 'GEARSfan')} - Gears of War
-        
-        **Sports**
-        ${emojiCache.find(emoji => emoji.name === 'NBA2Kfan')} - NBA 2K
-        ${emojiCache.find(emoji => emoji.name === 'MADDENfan')} - Madden
-        ${emojiCache.find(emoji => emoji.name === 'FIFAfan')} - FIFA
-        
-        **Roleplaying Games**
-        ${emojiCache.find(emoji => emoji.name === 'STARWARSfan')} - Star Wars: The Old Republic
+**Shooters**
+${emojiCache.find(emoji => emoji.name === 'DESTINY2fan')} - Destiny 2
+${emojiCache.find(emoji => emoji.name === 'FNfan')} - Fortnite
+${emojiCache.find(emoji => emoji.name === 'PUBGfan')} - PlayerUnknown's Battlegrounds
+${emojiCache.find(emoji => emoji.name === 'TARKOVfan')} - Escape from Tarkov
+${emojiCache.find(emoji => emoji.name === 'GEARSfan')} - Gears of War
 
-        **Card Games**
-        ${emojiCache.find(emoji => emoji.name === 'HSfan')} - Hearthstone
-        ${emojiCache.find(emoji => emoji.name === 'MTGfan')} - Magic: The Gathering
-        ${emojiCache.find(emoji => emoji.name === 'YUGIOHfan')} - Yu-Gi-Oh!
-        
-        **MOBA**
-        ${emojiCache.find(emoji => emoji.name === 'SMITEfan')} - Smite
-        ${emojiCache.find(emoji => emoji.name === 'DOTAfan')} - DOTA
-        
-        **Arcade and Others**
-        ${emojiCache.find(emoji => emoji.name === 'AMONGUSfan')} - Among Us
-        ${emojiCache.find(emoji => emoji.name === 'PokeGOfan')} - Pokémon GO
-        ${emojiCache.find(emoji => emoji.name === 'OTHERfan')} - Other Games
+**Sports**
+${emojiCache.find(emoji => emoji.name === 'NBA2Kfan')} - NBA 2K
+${emojiCache.find(emoji => emoji.name === 'MADDENfan')} - Madden
+${emojiCache.find(emoji => emoji.name === 'FIFAfan')} - FIFA
+
+**Roleplaying Games**
+${emojiCache.find(emoji => emoji.name === 'STARWARSfan')} - Star Wars: The Old Republic
+
+**Card Games**
+${emojiCache.find(emoji => emoji.name === 'HSfan')} - Hearthstone
+${emojiCache.find(emoji => emoji.name === 'MTGfan')} - Magic: The Gathering
+${emojiCache.find(emoji => emoji.name === 'YUGIOHfan')} - Yu-Gi-Oh!
+
+**MOBA**
+${emojiCache.find(emoji => emoji.name === 'SMITEfan')} - Smite
+${emojiCache.find(emoji => emoji.name === 'DOTAfan')} - DOTA
+
+**Arcade and Others**
+${emojiCache.find(emoji => emoji.name === 'AMONGUSfan')} - Among Us
+${emojiCache.find(emoji => emoji.name === 'PokeGOfan')} - Pokémon GO
+${emojiCache.find(emoji => emoji.name === 'OTHERfan')} - Other Games
         `);
         const interests = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your other interests/hobbies:`)
             .setDescription(`
-        ${emojiCache.find(emoji => emoji.name === 'ANIMEfan')} - Anime
-        ${emojiCache.find(emoji => emoji.name === 'BOARDfan')} - Board Games
+${emojiCache.find(emoji => emoji.name === 'ANIMEfan')} - Anime
+${emojiCache.find(emoji => emoji.name === 'BOARDfan')} - Board Games
         `);
         const platform = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select the platforms that you game on:`)
             .setDescription(`
-        ${emojiCache.find(emoji => emoji.name === 'XBOXfan')} - Xbox
-        ${emojiCache.find(emoji => emoji.name === 'PSfan')} - Playstation
-        ${emojiCache.find(emoji => emoji.name === 'SWITCHfan')} - Switch
-        ${emojiCache.find(emoji => emoji.name === 'PCfan')} - PC/MAC
-        ${emojiCache.find(emoji => emoji.name === 'MOBILEfan')} - Mobile
-        ${emojiCache.find(emoji => emoji.name === 'RETROfan')} - Retro
+${emojiCache.find(emoji => emoji.name === 'XBOXfan')} - Xbox
+${emojiCache.find(emoji => emoji.name === 'PSfan')} - Playstation
+${emojiCache.find(emoji => emoji.name === 'SWITCHfan')} - Switch
+${emojiCache.find(emoji => emoji.name === 'PCfan')} - PC/MAC
+${emojiCache.find(emoji => emoji.name === 'MOBILEfan')} - Mobile
+${emojiCache.find(emoji => emoji.name === 'RETROfan')} - Retro
         `);
         const pronoun = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your pronouns:`)
             .setDescription(`
-        ${emojiCache.find(emoji => emoji.name === 'hehim')} - He/Him
-        ${emojiCache.find(emoji => emoji.name === 'sheher')} - She/Her
-        ${emojiCache.find(emoji => emoji.name === 'theythem')} - They/Them
-        ${emojiCache.find(emoji => emoji.name === 'askme')} - Ask Me
+${emojiCache.find(emoji => emoji.name === 'hehim')} - He/Him
+${emojiCache.find(emoji => emoji.name === 'sheher')} - She/Her
+${emojiCache.find(emoji => emoji.name === 'theythem')} - They/Them
+${emojiCache.find(emoji => emoji.name === 'askme')} - Ask Me
         `);
         const living = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select where you live on campus:`)
             .setDescription(`
-        🇭 - Hewett Hall
-        🇲 - Manchester Hall
-        🇹 - Tri Towers
-        🇨 - Cardinal Court
-        🇼 - Watterson Towers
-        🇴 - Off Campus Housing
+🇭 - Hewett Hall
+🇲 - Manchester Hall
+🇹 - Tri Towers
+🇨 - Cardinal Court
+🇼 - Watterson Towers
+🇴 - Off Campus Housing
+        `);
+        const mainRole = new MessageEmbed()
+        .setColor('CE1126')
+        .setTitle(`Select your extra roles in the server:`)
+        .setDescription(`
+🏅 - See results from our competitive teams
+🎙️ - Posts when you Stream
+        `);
+        const year = new MessageEmbed()
+        .setColor('CE1126')
+        .setTitle(`Select your year in school:`)
+        .setDescription(`        
+1️⃣ - First Year (Freshman)
+2️⃣ - Second Year (Sophomore)
+3️⃣ - Third Year (Junior)
+4️⃣ - Fourth(+) Year (Senior)
+🎓 - Graduate
+        `);
+        const arena = new MessageEmbed()
+        .setColor('CE1126')
+        .setTitle(`Select your desired Arena roles:`)
+        .setDescription(`
+${emojiCache.find(emoji => emoji.name === 'RedbirdEHead3')} - Select this to be able to see chats related to the esports arena
         `);
         const rankHalo = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your current rank:`)
-            .setDescription(``);
-        const mainRole = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select your extra roles in the server:`)
             .setDescription(`
-        🏅 - See results from our competitive teams
-        🎙️ - Posts when you Stream
-        `);
+            
+            `);
+
         const rankRL = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your current rank:`)
-            .setDescription(``);
-        const social = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select the socials you want to follow:`)
-            .setDescription(``);
-        const club = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`React to this message with the games that you play:`)
-            .setDescription(``);
-        const year = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select your year in school:`)
-            .setDescription(`        1️⃣ - First Year (Freshman)
-        2️⃣ - Second Year (Sophomore)
-        3️⃣ - Third Year (Junior)
-        4️⃣ - Fourth(+) Year (Senior)
-        🎓 - Graduate
-        `);
-        const position = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select your desired position:`)
-            .setDescription(``);
+            .setDescription(`
+            
+            `);
         const roleFFXIV = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your desired role:`)
             .setDescription(`
-            ${emojiCache.find(emoji => emoji.name === 'tank')} - Tank
-            *(Paladin, Warrior, Dark Knight, Gunbreaker)*
+${emojiCache.find(emoji => emoji.name === 'tank')} - Tank
+*(Paladin, Warrior, Dark Knight, Gunbreaker)*
 
-            ${emojiCache.find(emoji => emoji.name === 'healer')} - Healer
-            *(White Mage, Scholar, Astrologian, Sage)*
+${emojiCache.find(emoji => emoji.name === 'healer')} - Healer
+*(White Mage, Scholar, Astrologian, Sage)*
 
-            ${emojiCache.find(emoji => emoji.name === 'meleeDPS')} - Melee DPS
-            *(Monk, Dragoon, Ninja, Samurai, Reaper)*
+${emojiCache.find(emoji => emoji.name === 'meleeDPS')} - Melee DPS
+*(Monk, Dragoon, Ninja, Samurai, Reaper)*
 
-            ${emojiCache.find(emoji => emoji.name === 'rangedMDPS')} - Ranged Magical DPS   
-            *(Black Mage, Summoner, Red Mage, Blue Mage)*
+${emojiCache.find(emoji => emoji.name === 'rangedMDPS')} - Ranged Magical DPS   
+*(Black Mage, Summoner, Red Mage, Blue Mage)*
 
-            ${emojiCache.find(emoji => emoji.name === 'rangedPDPS')} - Ranged Physical DPS
-            *(Bard, Machinist, Dancer)*
+${emojiCache.find(emoji => emoji.name === 'rangedPDPS')} - Ranged Physical DPS
+*(Bard, Machinist, Dancer)*
             `);        
         const datacenterFFXIV = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select the datacenter for your server:`)
             .setDescription(`
-            🟩 - Crystal:
-            *(Balmung, Brynhildr, Coeurl, Diabolos, Goblin, Malboro, Mateus, Zalera)*
+🟩 - Crystal:
+*(Balmung, Brynhildr, Coeurl, Diabolos, Goblin, Malboro, Mateus, Zalera)*
 
-            🟨 - Aether:
-            *(Adamantois, Cactuar, Faerie, Gilgamesh, Jenova, Midgardsormr, Sargatanas, Siren)*
+🟨 - Aether:
+*(Adamantois, Cactuar, Faerie, Gilgamesh, Jenova, Midgardsormr, Sargatanas, Siren)*
 
-            🟧 - Primal:   
-            *(Behemoth, Excalibur, Exodus, Famfrit, Hyperion, Lamia, Leviathan, Ultros)*
+🟧 - Primal:   
+*(Behemoth, Excalibur, Exodus, Famfrit, Hyperion, Lamia, Leviathan, Ultros)*
 
-            🟥 - Dynamis:
-            *(Halicarnassus, Maduin, Marlith, Seraph)*
+🟥 - Dynamis:
+*(Halicarnassus, Maduin, Marlith, Seraph)*
             `);        
         const playstylesFFXIV = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your playstyles:`)
             .setDescription(`
-            ${emojiCache.find(emoji => emoji.name === 'pvp')} - PvP
-            ${emojiCache.find(emoji => emoji.name === 'raiders')} - Raiders
-            ${emojiCache.find(emoji => emoji.name === 'ultimates')} - Ultimates
-            ${emojiCache.find(emoji => emoji.name === 'highend')} - High End Content
-            *(For players interested in endgame PvE content, such as savage and unreal raids, trials, as well as criterion dungeons.)*
+${emojiCache.find(emoji => emoji.name === 'pvp')} - PvP
+${emojiCache.find(emoji => emoji.name === 'raiders')} - Raiders
+${emojiCache.find(emoji => emoji.name === 'ultimates')} - Ultimates
+${emojiCache.find(emoji => emoji.name === 'highend')} - High End Content
+*(For players interested in endgame PvE content, such as savage and unreal raids, trials, as well as criterion dungeons.)*
             `);
         const serverRolesFFXIV = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your club roles:`)
             .setDescription(`
-            🗓️ - Community Events
-            👥 - Looking For Party
-            `);   
+🗓️ - Community Events
+👥 - Looking For Party
+            `);
+        const overwatchNotif = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`Select what notifications you want to receive:`)
+            .setDescription(`
+${emojiCache.find(emoji => emoji.name === 'twitter')} - Twitter Notis
+${emojiCache.find(emoji => emoji.name === 'twitch')} - Twitch Notis
+${emojiCache.find(emoji => emoji.name === 'tracerPug')} - PUGs Role
+🛎️ - Ringers
+*React to this role if you want to be a potential sub*
+            `);
+        const social = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`Select the socials you want to follow:`)
+            .setDescription(`
+        `);
+        const club = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`React to this message with the games that you play:`)
+            .setDescription(`
+            `);
+        const position = new MessageEmbed()
+            .setColor('CE1126')
+            .setTitle(`Select your desired position:`)
+            .setDescription(`
+            `);
         const serverTalentMC = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select your talent:`)
-            .setDescription(``);
+            .setDescription(`
+            `);
         const serverTypeMC = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select what server type you want to play in:`)
-            .setDescription(``);
+            .setDescription(`
+            `);
         const notification = new MessageEmbed()
             .setColor('CE1126')
             .setTitle(`Select what notifications you want to receive:`)
-            .setDescription(``);
-        const overwatchNotif = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select what Overwatch notifications you want to receive:`)
-            .setDescription(``);
-        const arena = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select your desired Arena roles:`)
-            .setDescription(`${emojiCache.find(emoji => emoji.name === 'RedbirdEHead3')} - Select this to be able to see chats related to the esports arena
-        `);
-
-        const servername = interaction.options.getString("server", true);
-        const channel = interaction.options.getChannel("channel", true);
+            .setDescription(`
+            `);
+        /*END EMBEDS*/ 
+        const servername = interaction.options.getString("Server", true);
+        const channel = interaction.options.getChannel("Channel", true);
         switch (servername) {
             case "all": {
                 const gamesMessage = await channel.send({ embeds: [games], files: ["assets/Games Panel.png"], fetchReply: true });
@@ -469,6 +503,14 @@ module.exports = {
                 livingEmojis.forEach(emoji => livingMessage.react(emoji));
 
                 break;
+            }            
+            case "overwatch": {
+                const overwatchNotifMessage = await channel.send({ embeds: [overwatchNotif], files: ["assets/Notification Panel.png"], fetchReply: true });
+                overwatchNotifEmojis.forEach(emoji => overwatchNotifMessage.react(emoji));
+
+                const pronounMessage = await channel.send({ embeds: [pronoun], files: ["assets/Pronouns Panel.png"], fetchReply: true });
+                pronounEmojis.forEach(emoji => pronounMessage.react(emoji));
+                break;
             }
             case "test": {
                 const row = new MessageActionRow()
@@ -493,5 +535,6 @@ module.exports = {
                 break;
             }
         }
+        interaction.reply("React Roles Setup for this server");
     }
 }
