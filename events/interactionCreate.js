@@ -1,8 +1,108 @@
-const {MessageAttachment,MessageEmbed} = require('discord.js')
+const {MessageAttachment,MessageEmbed,Modal,TextInputComponent,MessageActionRow,MessageButton} = require('discord.js')
+const emojiJSON = require('../emojiRoles.json');
 module.exports = {
 	name: 'interactionCreate',
 	async execute(interaction) {
 		if(interaction.isButton()){
+			/*Invite List Interaction
+			Used to see what club server emojis the User has interacted with and shows them a modal with all of those server's invite links
+			*/
+			if(interaction.customId == 'inviteList'){
+				if(interaction.channelId == '1073263946083082301'){
+					console.log("hit, you have hit the invite list button")
+					const modal = new Modal()
+						.setCustomId('serversToJoin')
+						.setTitle('Servers To Join');
+					const row = new MessageActionRow()
+						.addComponents(
+							new MessageButton()
+								.setLabel(`Anime`)
+								.setStyle('LINK')
+								.setURL('https://discord.gg/QGv4eYBkXz'),
+							new MessageButton()
+								.setLabel('Apex')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/nMRADqfCsY'),
+							new MessageButton()
+								.setLabel('Call Of Duty')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/Np9QGyqJm5'),
+								
+							new MessageButton()
+								.setLabel('CS:GO')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/JjHj2SmjPx'),
+								
+							new MessageButton()
+								.setLabel('League Of Legends')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/TsM3ZPXz84'),
+								);
+					const row2 = new MessageActionRow()
+						.addComponents(
+							new MessageButton()
+								.setLabel('Overwatch')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/ngSfhHm28F'),
+							new MessageButton()
+								.setLabel('R6:Siege')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/G6tMPUmfxu'),
+								
+							new MessageButton()
+								.setLabel('Rocket League')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/SC2YhfvkN3'),
+								
+							new MessageButton()
+								.setLabel('Valorant')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/mMbmA2bsag'),
+								);
+					const row3 = new MessageActionRow()
+						.addComponents(
+							new MessageButton()
+								.setLabel('Minecraft')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/qMQFvUwpgW'),
+							new MessageButton()
+								.setLabel('FFXIV')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/HD8wYHYdCu'),
+							new MessageButton()
+								.setLabel('D&D')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/9P5vU56Uzv'),
+							new MessageButton()
+								.setLabel('FGC')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/7BX65tSxVA'),
+							);
+					const row4 = new MessageActionRow()
+						.addComponents(
+							new MessageButton()
+								.setLabel('HALO')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/bhTTfxZQ7a'),
+							new MessageButton()
+								.setLabel('Wargaming')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/cvxVzSQrd4'),
+							new MessageButton()
+								.setLabel('Super Smash Bros.')
+								.setStyle('LINK')
+								.setURL('https://discord.gg/ar6pU6G'),
+							);
+					// An action row only holds one text input,
+					// so you need one action row per text input.
+
+					// Add inputs to the modal
+					modal.addComponents(row,row2,row3,row4);
+					await interaction.showModal(modal);
+				}
+			}
+
+
 			if(interaction.customId == 'EO'||interaction.customId == 'SMM'||interaction.customId == 'TDD'||interaction.customId == 'BP'){
 				let infoEmbed = new MessageEmbed();
 				let attachment = new MessageAttachment();
