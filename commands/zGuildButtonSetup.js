@@ -16,7 +16,7 @@ module.exports = {
             .addComponents(
                 new MessageButton()
                     .setLabel(`Join`)
-                    .setEmoji(`${emojiCache.find(emoji => emoji.name === 'ANIMEfan')}`)
+                    .setEmoji(`Anime`)
                     .setStyle('LINK')
                     .setURL('https://discord.gg/QGv4eYBkXz'),
                 new MessageButton()
