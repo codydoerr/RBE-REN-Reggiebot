@@ -3,6 +3,7 @@
         "clubGames":[
             "APEXfan","ANIMEfan","CODfan","CSfan","DnDfan","FFXIVfan","HALOfan","LOLfan","OWfan","R6fan","RLfan","SMASHfan","VALORANTfan"
         ],
+        "clubGameChannel":[0,0,0,0,0,1081355333357817866,0,0,0,0,0,0,0,"startTestIndex",1081301966510100480,1083775765474189368,1073263946083082301],
         "otherGames":[
             "FNfan","PUBGfan","TARKOVfan","GEARSfan","NBA2Kfan","MADDENfan","FIFAfan","HSfan","MTGfan","SMITEfan","DOTAfan","YUGIOHfan","AMONGUSfan","PokeGOfan","OTHERfan"
         ]
@@ -523,6 +524,30 @@
         "role":{
             "name":"Looking For Party",
             "id":1012070053073649714
+        }
+    },
+    "twitch":{
+        "name":"twitch",
+        "role":{
+            "name":"Twitch Notis"
+        }
+    },    
+    "twitter":{
+        "name":"twitter",
+        "role":{
+            "name":"Twitter Notis"
+        }
+    },    
+    "tracerPug":{
+        "name":"tracerPug",
+        "role":{
+            "name":"PUGs Role"
+        }
+    },
+    "🛎️":{
+        "name":"🛎️",
+        "role":{
+            "name":"Ringers"
         }
     }
 }
