@@ -1,61 +1,89 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageAttachment } = require('discord.js');
+const {ChannelType} = require('discord-api-types/v10')
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('za_reactroleupdate')
-        .setDescription('MUST BE RAN AFTER UPDATING CODE Update the message listed in code'),
+        .setDescription('Command flow to update information on our react role panels')
+        .addChannelOption(option => 
+            option.addChannelTypes(ChannelType.GuildText)
+            .setName("React Role Channel")
+            .setDescription("Choose the channel that the react roles are in")
+            .setRequired(true)
+            )
+        .addIntegerOption(option =>
+            option.setName("Message ID")
+            .setDescription("The Message ID of the embed you are changing")
+            .setRequired(true)
+            )        
+        .addStringOption(option =>
+            option.setName("Attachment Name")
+            .setDescription("The name of the attachment at the top of the embed")
+            .setRequired(true)
+            )
+        .addStringOption(option =>
+            option.setName("New Embed Title")
+            .setDescription("The new title that should be in the Embed title")
+            .setRequired(false)
+            )        
+        .addStringOption(option =>
+            option.setName("New Embed Description")
+            .setDescription("The new message that should be in the Embed description")
+            .setRequired(false)
+            )        
+        .addStringOption(option =>
+            option.setName("New Emoji")
+            .setDescription("The new emoji that should be added to the reactions")
+            .setRequired(false)
+            )        
+        .addStringOption(option =>
+            option.setName("New Custom Emoji")
+            .setDescription("The name of the emoji that should be added to the reactions")
+            .setRequired(false)
+            ),
     async execute(interaction, clientm) {
+        let custom = 0;
         const emojiCache = interaction.guild.emojis.cache
+        if(interaction.options.getString("New Emoji",true)!=null){
+                const newEmoji = `${interaction.options.getString("New Emoji",true)}`
+                custom = 1;
+        }        
+        if(interaction.options.getString("New Custom Emoji",true)!=null){
+                const newCustomEmoji = emojiCache.find(emoji => emoji.name === `${interaction.options.getString("New Custom Emoji",true)}`)
+                custom = 2;
+        }
 
-        const newEmoji = emojiCache.find(emoji => emoji.name === 'STARWARSfan')//===MUST CHANGE THIS TO PROPER EMOJI===
+        const embed = new MessageEmbed()
+        .setColor('CE1126')
+        .setTitle(interaction.options.getString("New Embed Title"))
+        .setDescription(interaction.options.getString("New Embed Description"));    
 
-
-        /*
-        ===MUST CHANGE THIS EMBED TO PROPER EMBED===
-        */
-        const otherGames = new MessageEmbed()
-            .setColor('CE1126')
-            .setTitle(`Select the games you play that are talked about in our server:`)
-            .setDescription(` 
-        **Shooters**
-        ${emojiCache.find(emoji => emoji.name === 'DESTINY2fan')} - Destiny 2
-        ${emojiCache.find(emoji => emoji.name === 'FNfan')} - Fortnite
-        ${emojiCache.find(emoji => emoji.name === 'PUBGfan')} - PlayerUnknown's Battlegrounds
-        ${emojiCache.find(emoji => emoji.name === 'TARKOVfan')} - Escape from Tarkov
-        ${emojiCache.find(emoji => emoji.name === 'GEARSfan')} - Gears of War
-        
-        **Sports**
-        ${emojiCache.find(emoji => emoji.name === 'NBA2Kfan')} - NBA 2K
-        ${emojiCache.find(emoji => emoji.name === 'MADDENfan')} - Madden
-        ${emojiCache.find(emoji => emoji.name === 'FIFAfan')} - FIFA
-        
-        **Roleplaying Games**
-        ${emojiCache.find(emoji => emoji.name === 'STARWARSfan')} - Star Wars: The Old Republic
-
-        **Card Games**
-        ${emojiCache.find(emoji => emoji.name === 'HSfan')} - Hearthstone
-        ${emojiCache.find(emoji => emoji.name === 'MTGfan')} - Magic: The Gathering
-        ${emojiCache.find(emoji => emoji.name === 'YUGIOHfan')} - Yu-Gi-Oh!
-        
-        **MOBA**
-        ${emojiCache.find(emoji => emoji.name === 'SMITEfan')} - Smite
-        ${emojiCache.find(emoji => emoji.name === 'DOTAfan')} - DOTA
-        
-        **Arcade and Others**
-        ${emojiCache.find(emoji => emoji.name === 'AMONGUSfan')} - Among Us
-        ${emojiCache.find(emoji => emoji.name === 'PokeGOfan')} - Pokémon GO
-        ${emojiCache.find(emoji => emoji.name === 'OTHERfan')} - Other Games
-        `);
-        /*
-        ===END OF CHANGES===
-        */
         let aGuild = await interaction.guild.fetch()
-        let channel = await aGuild.channels.fetch('1081301966510100480'); 
-        let message = await channel.messages.fetch('1081302070574985287'); //MUST CHANGE THIS TO PROPER MESSAGE
-        //   await message.removeAttachments();
-        //   await message.edit({ embeds: [otherGames], files: ["assets/Other Games Panel.png"], fetchReply: true });
-        //   await message.react(newEmoji);
+        let channel = await aGuild.channels.fetch(interaction.options.getChannel("React Role Channel", true)); 
+        let message = await channel.messages.fetch(interaction.options.getInteger("Message ID", true));
+
+        await message.removeAttachments();
+        if(interaction.options.getString("New Embed Title")=="Select the games you play from our Redbird Gaming Clubs:"){
+            const row = new MessageActionRow()
+            .addComponents(
+                new MessageButton()
+                    .setCustomId('inviteList')
+                    .setLabel('Click here to see your servers to join!')
+                    .setStyle('SECONDARY')
+            );
+            await message.edit({ embeds: [embed], files: [`assets/${interaction.options.getString("Attachment Name")}.png`], fetchReply: true });
+        }else{
+            await message.edit({ embeds: [embed], components: [row], files: [`assets/${interaction.options.getString("Attachment Name")}.png`], fetchReply: true });
+        }
+        if(custom == 1){
+            await message.react(newEmoji);
+        }else if (custome == 2){
+            await message.react(newCustomEmoji);
+        }
+
+        await interaction.reply("Role Panel Updated");
+        
         
         
 
