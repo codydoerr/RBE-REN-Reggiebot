@@ -13,77 +13,160 @@
         "role":{
             "name":"APEXfan",
             "id":672818973150281748
-        }
+        },
+        "inviteLink":"https://discord.gg/nMRADqfCsY",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Apex Legends Club"
     },
     "CODfan" :{
         "name":"CODfan",
         "role":{
             "name":"CODfan",
             "id":672818976954384454
-        }
+        },
+        "inviteLink":"https://discord.gg/Np9QGyqJm5",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Call of Duty Club"
     },
     "CSfan" :{
         "name":"CSfan",
         "role":{
             "name":"CSfan",
             "id":672818979949248512
-        }
+        },
+        "inviteLink":"https://discord.gg/JjHj2SmjPx",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird CS:GO Club"
     },
     "DnDfan" :{
         "name":"DnDfan",
         "role":{
             "name":"DnDfan",
             "id":745827213022068839
-        }
+        },
+        "inviteLink":"https://discord.gg/9P5vU56Uzv",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Dungeons and Dragons Club"
     },
     "HALOfan" :{
         "name":"HALOfan",
         "role":{
             "name":"HALOfan",
             "id":681573235422396417
-        }
+        },
+        "inviteLink":"https://discord.gg/bhTTfxZQ7a",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Halo Club"
     },
     "LOLfan" :{
         "name":"LOLfan",
         "role":{
             "name":"LOLfan",
             "id":672818997816852481
-        }
+        },
+        "inviteLink":"https://discord.gg/TsM3ZPXz84",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird League of Legends Club"
     },
     "OWfan" :{
         "name":"OWfan",
         "role":{
             "name":"OWfan",
             "id":672819014787006484
-        }
+        },
+        "inviteLink":"https://discord.gg/ngSfhHm28F",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Overwatch Club"
     },
     "R6fan" :{
         "name":"R6fan",
         "role":{
             "name":"R6fan",
             "id":672819024710729739
-        }
+        },
+        "inviteLink":"https://discord.gg/G6tMPUmfxu",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Rainbow 6: Siege Club"
     },
     "RLfan" :{
         "name":"RLfan",
         "role":{
             "name":"RLfan",
             "id":672819030582886439
-        }
+        },
+        "inviteLink":"https://discord.gg/SC2YhfvkN3",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Rocket League Club"
     },
     "SMASHfan" :{
         "name":"SMASHfan",
         "role":{
             "name":"SMASHfan",
             "id":672819036081356818
-        }
+        },
+        "inviteLink":"https://discord.gg/ar6pU6G",
+        "redbirdLifeLink":"",
+        "clubName":"BloNoSmashBros"
     },
     "VALORANTfan" :{
         "name":"VALORANTfan",
         "role":{
             "name":"VALORANTfan",
             "id":695079488773685290
-        }
+        },
+        "inviteLink":"https://discord.gg/mMbmA2bsag",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Valorant Club"
+    },
+    "FIGHTINGfan" :{
+        "name":"FIGHTINGfan",
+        "role":{
+            "name":"FIGHTINGfan",
+            "id":756575848039055381
+        },
+        "inviteLink":"https://discord.gg/7BX65tSxVA",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Fighting Game Club"
+    },
+    "FFXIVfan" :{
+        "name":"FFXIVfan",
+        "role":{
+            "name":"FFXIVfan",
+            "id":1050480973441138739
+        },
+        "inviteLink":"https://discord.gg/HD8wYHYdCu",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Final Fantasy XIV Club"
+    },
+    "ANIMEfan" :{
+        "name":"ANIMEfan",
+        "role":{
+            "name":"ANIMEfan",
+            "id":754052310870524085
+        },
+        "inviteLink":"https://discord.gg/QGv4eYBkXz",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Anime Club"
+    },
+    "MCfan" :{
+        "name":"MCfan",
+        "role":{
+            "name":"MCfan",
+            "id":883441275938938880
+        },
+        "inviteLink":"https://discord.gg/qMQFvUwpgW",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Minecraft Club"
+    },
+    "DESTINY2fan" :{
+        "name":"DESTINY2fan",
+        "role":{
+            "name":"DESTINY2fan",
+            "id":1081290336120340622
+        },
+        "inviteLink":"https://discord.gg/b3eVWS5ttE",
+        "redbirdLifeLink":"",
+        "clubName":"Redbird Destiny 2 Club"
     },
     "FNfan" :{
         "name":"FNfan",
@@ -141,20 +224,6 @@
             "id":672819002929840129
         }
     },
-    "MCfan" :{
-        "name":"MCfan",
-        "role":{
-            "name":"MCfan",
-            "id":883441275938938880
-        }
-    },
-    "FIGHTINGfan" :{
-        "name":"FIGHTINGfan",
-        "role":{
-            "name":"FIGHTINGfan",
-            "id":756575848039055381
-        }
-    },
     "FIFAfan" :{
         "name":"FIFAfan",
         "role":{
@@ -169,13 +238,7 @@
             "id":672818994914263050
         }
     },
-    "FFXIVfan" :{
-        "name":"FFXIVfan",
-        "role":{
-            "name":"FFXIVfan",
-            "id":1050480973441138739
-        }
-    },
+
     "MTGfan" :{
         "name":"MTGfan",
         "role":{
@@ -223,13 +286,6 @@
         "role":{
             "name":"OTHERfan",
             "id":681982421432008776
-        }
-    },
-    "ANIMEfan" :{
-        "name":"ANIMEfan",
-        "role":{
-            "name":"ANIMEfan",
-            "id":754052310870524085
         }
     },
     "BOARDfan" :{
@@ -405,13 +461,6 @@
         "role":{
             "name":"Esports and Gaming Arena",
             "id":1027244979095097404
-        }
-    },
-    "DESTINY2fan" :{
-        "name":"DESTINY2fan",
-        "role":{
-            "name":"DESTINY2fan",
-            "id":1081290336120340622
         }
     },
     "STARWARSfan" :{
