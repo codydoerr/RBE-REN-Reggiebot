@@ -33,7 +33,7 @@ ${emojiJSON[game].inviteLink}
 							}
 						}
 					);
-					// Add inputs to the modal
+
 					embed.setDescription(
 						`
 Click on the links below to join the associated server:
@@ -54,7 +54,7 @@ ${descString}
 	
 					attachment = new MessageAttachment('./assets/EsportsPanel_EventOutreach_B.png')
 					infoEmbed = new MessageEmbed()
-					.setColor('FF0000')
+					.setColor('CE1126')
 					.setImage("attachment://EsportsPanel_EventOutreach_B.png")
 					.setDescription(`In-person interaction is the X factor that sets gaming communities apart from the online-only gaming communities. This adds social interaction to our favorite online games. Our team:
 	
@@ -68,7 +68,7 @@ ${descString}
 				}else if(interaction.customId == 'SMM'){
 					attachment = new MessageAttachment('./assets/EsportsPanel_SMM_B.png')
 					infoEmbed = new MessageEmbed()
-					.setColor('FF0000')
+					.setColor('CE1126')
 					.setImage("attachment://EsportsPanel_SMM_B.png")
 					.setDescription(`The social media and marketing team represents the Redbird Esports brand online. They make sure all messaging and art fully portrays our high-quality program.
 					The team includes:
@@ -85,7 +85,7 @@ ${descString}
 				}else if(interaction.customId == 'TDD'){
 					attachment = new MessageAttachment('./assets/EsportsPanel_DD_B.png')
 					infoEmbed = new MessageEmbed()
-					.setColor('FF0000')
+					.setColor('CE1126')
 					.setImage("attachment://EsportsPanel_DD_B.png")
 					.setDescription(`Technology makes our gaming community thrive. The technology and digital development team design and implement solutions that drive participation and engagement on all Redbird Esports platforms.
 	
@@ -100,7 +100,7 @@ ${descString}
 				}else if(interaction.customId == 'BP'){
 					attachment = new MessageAttachment('./assets/EsportsPanel_BP_B.png')
 					infoEmbed = new MessageEmbed()
-					.setColor('FF0000')
+					.setColor('CE1126')
 					.setImage("attachment://EsportsPanel_BP_B.png")
 					.setDescription(`Live-streaming is crucial to how fans engage with their favorite esports teams and organizations. The broadcasting and production team provides fans with access to gameplay, competition, and events. They also produce quality broadcasting, video, and voice content.
 	
