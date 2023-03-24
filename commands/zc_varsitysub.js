@@ -14,7 +14,7 @@ module.exports = {
      .addStringOption(option => option.setName("title")
                                       .setDescription("The title for game of the subbing player.")
                                       .setRequired(true)
-                                      .addStringOption(
+                                      .addChoices(
                                       {name:"Overwatch",value:"VarsityOWsub"},
                                       {name:"Rocket League",value:"VarsityRLsub"},
                                       {name:"League Of Legends",value:"VarsityLOLsub"},)
