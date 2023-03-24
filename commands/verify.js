@@ -28,7 +28,9 @@ module.exports = {
             let subErrorRole
             if(veriCode === String(userinfo.verify)){
                 console.log('nice')
-                await interaction.reply("Welcome to the server! Make sure to head over to <#896092041052831774> and <#1081301966510100480> to assign yourself to the appropriate categories. We'll leave this ticket open for a few minutes so the support team can answer any questions you might have!");
+                await interaction.reply(`
+Welcome to the server! Make sure to head over to <#1081301966510100480> and assign yourself to categories you want to be a part of. You can also get server invites to our clubs by clicking the button in <#1081301966510100480>. We will leave this ticket open for a few minutes so the support team can answer any questions you might have!`
+                );
                 //interaction.member.setNickname(userinfo.IlstuEmail.split("@")[0]) - This is the old nick name change that will be done by mods now
                 //x = await clientm.guilds.fetch()
                 //console.log(x)
