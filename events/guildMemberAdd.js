@@ -3,7 +3,7 @@ module.exports = {
 	once: false,
 	execute(member) {
             if(member.guild.name === "Redbird Esports"){
-                try{
+                /*try{
                     member.createDM()
                         .then( dm => {dm.send("Welcome to Redbird Esports!  Please see the instructions in the :wave:welcome channel on how to get verified.  This server is open to Illinois State University students, alumni, staff, and faculty only.\n\n" +
                 
@@ -19,6 +19,7 @@ module.exports = {
                     catch(error){
                         console.error(error);
                     }
+                    */
             }
             else{
                 try{
