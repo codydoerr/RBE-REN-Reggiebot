@@ -86,7 +86,6 @@ const twitch = new TwitchApi({
 
 RoleMgm = require(`./specialFunctions/RoleManager.js`);
 client.on('interactionCreate', async interaction => {
-    console.log(interaction)
     if (!interaction.isCommand() && !interaction.isSelectMenu() && !interaction.isButton()) return;
 
 

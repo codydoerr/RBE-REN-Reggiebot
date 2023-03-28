@@ -92,9 +92,9 @@ ${descString}
 					The team includes:
 					
 					- Technology and Digital Development Coordinator
-					- Resource Outreach Manager
-					- Game Server Administrator
-					- Application Developer
+					- Bot Developers
+					- Discord Administrators
+					- Event Support
 					
 					Want to apply? Head here: <#798392331412701234>`);
 				}else if(interaction.customId == 'BP'){
